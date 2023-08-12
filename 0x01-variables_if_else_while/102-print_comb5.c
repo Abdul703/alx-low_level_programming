@@ -22,7 +22,7 @@ for (i = 48; i < 58; i++)
 			for (l = 48; l < 58; l++)
 			{
 				/* check if  the combination is not printed */
-				if (i + j != k + l && i + j < k+l)
+				if (i + j != k + l && i + j < k + l)
 				{
 					putchar(i);
 					putchar(j);
@@ -31,7 +31,7 @@ for (i = 48; i < 58; i++)
 					putchar(l);
 
 					/* check if the combination is the last one */
-					if (i + j + k != 168)
+					if (i + j + k + l != 227)
 					{
 						putchar(',');
 						putchar(' ');
