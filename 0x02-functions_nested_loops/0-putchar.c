@@ -20,6 +20,6 @@ return (write(1, &c, 1));
  */
 int main(void)
 {
-_putchar(char 'c');
+_putchar('c');
 return (0);
 }
