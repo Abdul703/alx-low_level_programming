@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _putchar: print character to stdout
+ * _putchar - print character to stdout
  *
  * @c: character to print
  *
@@ -12,4 +12,14 @@
 int _putchar(char c)
 {
 return (write(1, &c, 1));
+}
+
+/**
+ * main - entry point
+ * Return: 0 for success
+ */
+int main(void)
+{
+_putchar(char 'c');
+return (0);
 }
