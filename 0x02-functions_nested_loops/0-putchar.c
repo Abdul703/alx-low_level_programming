@@ -2,12 +2,20 @@
 #include "main.h"
 
 /**
- * main - entry point
- *
- * Return: Always 0.
+ * print: _putchar
+ */
+void print_putchar()
+{
+printf("_putchar\n");
+}
+
+/**
+ * 
+ * print: _putchar
+ * return: always 0 as success
  */
 int main(void)
 {
-printf("%s\n", _putchar);
+print_putchar();
 return (0);
 }
