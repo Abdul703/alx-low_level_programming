@@ -1,21 +1,15 @@
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
- * print: _putchar
+ * _putchar: print character to stdout
+ *
+ * @c: character to print
+ *
+ * Return: always char as success
+ * ..
  */
-void print_putchar()
+int _putchar(char c)
 {
-printf("_putchar\n");
-}
-
-/**
- * 
- * print: _putchar
- * return: always 0 as success
- */
-int main(void)
-{
-print_putchar();
-return (0);
+return (write(1, &c, 1));
 }
