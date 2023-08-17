@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * print_sum_of_multiples - print sum of multiples of 3 and 5 below 1024
