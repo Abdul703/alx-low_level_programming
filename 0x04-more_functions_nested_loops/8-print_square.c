@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_squre - printing square using #
+ * print_square - printing square using #
  *
  * @size: size of the square
  *
  * Return: void
  */
-void print_squre(int size)
+void print_square(int size)
 {
 int i, j;
 
