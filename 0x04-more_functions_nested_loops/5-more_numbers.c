@@ -14,15 +14,11 @@ for (i = 0; i < 10; i++)
 	for (j = 0; j <= 14; j++)
 	{
 		/* check if number is 2 digit number */
-		if (j < 10)
+		if (j >= 10)
 		{
-			_putchar('0' + j);
+			_putchar('1');
 		}
-		else
-		{
-			_putchar('0' + j / 10);
-			_putchar('0' + j % 10);
-		}
+		_putchar('0' + (j % 10));
 	}
 	_putchar('\n');
 }
