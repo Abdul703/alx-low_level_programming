@@ -25,6 +25,7 @@ if (length_of_the_string % 2 == 0)
 	n = length_of_the_string / 2;
 else
 	n = (length_of_the_string - 1) / 2;
+n++;
 
 /* printing the last half*/
 while (n < length_of_the_string)
