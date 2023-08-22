@@ -16,7 +16,7 @@ while (*end != '\0')
 {
 	end++;
 }
- end--;
+end--;
 
 while (start < end)
 {
@@ -24,7 +24,7 @@ while (start < end)
 	temp = *start;
 	*start = *end;
 	*end = temp;
-	
+
 	end--;
 	start++;
 }
