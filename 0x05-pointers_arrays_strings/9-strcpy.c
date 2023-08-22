@@ -19,6 +19,7 @@ while (*src != '\0')
 	i++;
 	src++;
 }
+dest[i] = '\0';
 
 return (dest);
 }
