@@ -19,7 +19,7 @@ while (*s != '\0')
 }
 
 /* printing the string in reverse */
-while (s >= first_char_location)
+while (s != first_char_location)
 {
 	_putchar(*(s - 1));
 	--s;
