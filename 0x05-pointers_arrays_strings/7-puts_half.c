@@ -9,8 +9,7 @@
  */
 void puts_half(char *str)
 {
-
-int length_of_the_string, n;
+int length_of_the_string = 0, n;
 char *str_copy = str;
 
 /* getting the length of the string */
