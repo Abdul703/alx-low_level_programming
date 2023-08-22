@@ -28,7 +28,7 @@ else
 n++;
 
 /* printing the last half*/
-while (n < length_of_the_string)
+while (n <= length_of_the_string)
 {
 	_putchar(*(str + n));
 	n++;
