@@ -9,16 +9,23 @@
  */
 void rev_string(char *s)
 {
-int i = 0;
+char *start = s, *end = s, temp;
 
 /* getting the last index */
-while (*s != '\0')
+while (*end != '\0')
 {
-	i++;
-	s++;
+	end++;
 }
-_putchar(i + '0');
+ end--;
 
-/* printing the string in reverse */
+while (start < end)
+{
 
+	temp = *start;
+	*start = *end;
+	*end = temp;
+	
+	end--;
+	start++;
+}
 }
