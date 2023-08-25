@@ -11,19 +11,13 @@
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-int i = 0;
+size_t i;
 
-/* add the characters of 2nd string to the 1st */
-while (*(src + i) != '\0' && i < n)
-{
-	*(dest + i) = *(src + i);
+for (i = 0; i < n && src[i] != '\0'; i++)
+	dest[i] = src[i];
 
-	i++;
-}
-
-/* add the null terminator if n is greater than the length of string to copy */
-if (i < n)
-	*(dest + i) = '\0';
+for ( ; i < n; i++)
+	dest[i] = '\0';
 
 return (dest);
 }
