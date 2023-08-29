@@ -28,5 +28,5 @@ while (*accept != '\0')
 	}
 	accept++;
 }
-return (++count);
+return (count);
 }
