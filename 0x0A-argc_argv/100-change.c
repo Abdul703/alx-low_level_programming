@@ -15,7 +15,7 @@ int cents = atoi(argv[1]);
 
 if (argc == 2)
 {
-	printf("%d\n", 1);
+	printf("%d\n", cents);
 }
 else
 {
