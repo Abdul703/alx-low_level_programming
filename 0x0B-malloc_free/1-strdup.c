@@ -12,13 +12,18 @@
 */
 char *_strdup(char *str)
 {
-	char *str_dup;
-	int str_len = sizeof(str), i;
+	int str_len = 0, i;
+	char *str_dup = malloc(sizeof(char) * str_len);
 
 	if (str == NULL)
 		return (NULL);
 
-	str_dup = malloc(sizeof(char) * str_len);
+	/* Calculate the length of the string */
+	while (str[str_len] != '\0')
+	{
+		str_len++;
+	}
+
 	if (str_dup == NULL)
 		return (NULL);
 
