@@ -1,18 +1,14 @@
-#ifndef DOG_H
-#define DOG_H
+#include "dog.h"
+#include <stdlib.h>
 
 /**
- * struct dog - represent dog
+ * free_dog - frees dog memory
  *
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
+ * @d: dog struct address
+ *
+ * Return: void
  */
-struct dog
+void free_dog(dog_t *d)
 {
-	char *name;
-	float age;
-	char *owner;
-};
-
-#endif
+	free(d);
+}
