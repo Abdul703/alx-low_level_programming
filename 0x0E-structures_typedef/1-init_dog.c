@@ -1,18 +1,18 @@
-#ifndef DOG_H
-#define DOG_H
+#include "dog.h"
 
 /**
- * struct dog - represent dog
+ * init_dog - initialize dog struct
  *
+ * @d: pointer to the dog object
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
- */
-struct dog
+ *
+ * Return: void
+*/
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	char *name;
-	float age;
-	char *owner;
-};
-
-#endif
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
+}
