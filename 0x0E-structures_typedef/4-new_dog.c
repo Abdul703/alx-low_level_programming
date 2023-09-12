@@ -1,18 +1,26 @@
-#ifndef DOG_H
-#define DOG_H
+#include "dog.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
- * struct dog - represent dog
+ * new_dog - create new dog
  *
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
+ *
+ * Return: new dog
  */
-struct dog
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *name;
-	float age;
-	char *owner;
-};
+	dog_t *dog = malloc(sizeof(dog_t));
 
-#endif
+	if (dog == NULL)
+		return (NULL);
+
+	dog->name = name;
+	dog->age = age;
+	dog->owner = owner;
+
+	return (dog);
+}
