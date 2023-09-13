@@ -20,6 +20,6 @@ void print_dog(struct dog *d)
 		else
 			printf("Age: (nil)\n");
 		printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
+		free(d);
 	}
-	free(d);
 }
