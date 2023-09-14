@@ -2,28 +2,30 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - sum all the function parameters
+ *sum_them_all - Sums the parameters
  *
- * @n: number of passed arguments
+ *@n: The first variadic argument
  *
- * Return: total sum
+ *Return: The result of the sum
  */
+
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i;
-	int sum = 0, value;
 	va_list args;
+	unsigned int a;
+	unsigned int sumarg;
 
-	if (n == 0)
-		return (0);
+	a = sumarg = 0;
 
 	va_start(args, n);
-
-	for (i = 0; i < n; i++)
+	if (n == 0)
+		return (0);
+	while (a < n)
 	{
-		value = va_arg(args, int);
-		sum += value;
+		sumarg += va_arg(args, int);
+		a++;
 	}
+
 	va_end(args);
-	return (sum);
+	return (sumarg);
 }
