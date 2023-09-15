@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 		format_ptr++;
 		if (*format_ptr != '\0' &&
 			(*format_ptr == 's' || *format_ptr == 'i' ||
-			*format_ptr == 'c' || *format_ptr == 'a'))
+			*format_ptr == 'c' || *format_ptr == 'i'))
 		{
 			printf(", ");
 		}
