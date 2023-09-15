@@ -4,6 +4,20 @@
 #include <stdio.h>
 
 /**
+ * print_string - check if str is null
+ *
+ * @str: string to check
+ *
+ * Return: (nil) if NULL, otherwise the string
+ */
+char *print_string(char *str)
+{
+	if (str == NULL)
+		return ("(nil)");
+	return (str);
+}
+
+/**
  * print_all -prints anything that is pass as arg to function
  *
  * @format: type of the argument to print
@@ -31,14 +45,7 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args, double));
 				break;
 			case 's':
-				{
-					char *str = va_arg(args, char*);
-
-					if (str == NULL)
-						printf("(nil)");
-					else
-						printf("%s", str);
-				}
+				printf("%s", print_string(va_arg(args, char*)));
 				break;
 			default:
 				break;
@@ -47,7 +54,9 @@ void print_all(const char * const format, ...)
 		if (*format_ptr != '\0' &&
 			(*format_ptr == 's' || *format_ptr == 'i' ||
 			*format_ptr == 'c' || *format_ptr == 's'))
+		{
 			printf(", ");
+		}
 	}
 	printf("\n");
 	va_end(args);
