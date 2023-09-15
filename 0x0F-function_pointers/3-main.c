@@ -21,13 +21,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	/* Check If the operator is / or %, then checks if the divisor 0 */
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3] == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
 
