@@ -28,6 +28,7 @@ void print_all(const char * const format, ...)
 {
 	const char *format_ptr = format;
 	va_list args;
+	int flag = 0;
 
 	va_start(args, format);
 
@@ -37,23 +38,26 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
+				flag = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(args, int));
+				flag = 1;
 				break;
 			case 'f':
 				printf("%f", va_arg(args, double));
+				flag = 1
 				break;
 			case 's':
 				printf("%s", print_string(va_arg(args, char*)));
+				flag = 1;
 				break;
 			default:
+				flag = 0;
 				break;
 		}
 		format_ptr++;
-		if (*format_ptr != '\0' &&
-			(*format_ptr == 's' || *format_ptr == 'i' ||
-			*format_ptr == 'c'))
+		if (*format_ptr != '\0' && flag == 1)
 		{
 			printf(", ");
 		}
