@@ -30,11 +30,11 @@ int main(int argc, char *argv[])
 	mainPtr = (char *)&main;
 	number_of_bytes = atoi(argv[1]);
 
-	for (i = 0; i < number_of_bytes; i++)
+	for (i = 0; i < number_of_bytes - 1; i++)
 	{
 		printf("%02hhx ", mainPtr[i]);
 	}
 
-	printf("\n");
+	printf("%02hhx\n", mainPtr[i]);
 	return (0);
 }
