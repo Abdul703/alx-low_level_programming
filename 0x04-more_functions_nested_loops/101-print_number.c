@@ -9,7 +9,8 @@
  */
 void print_number(int n)
 {
-	int divisor = 1, num;
+	int divisor = 1, digit;
+	unsigned int num = n;
 
 	/* handle 0 */
 	if (n == 0)
@@ -22,18 +23,18 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num *= -1;
 	}
 
 	/* get highest divisor */
-	while (n / divisor >= 10)
+	while (num / divisor >= 10)
 		divisor *= 10;
 
 	/* printing the numbers */
 	while (divisor > 0)
 	{
-		num = (n / divisor) % 10;
-		_putchar(num + '0');
+		digit = (num / divisor) % 10;
+		_putchar(digit + '0');
 		divisor /= 10;
 	}
 }
