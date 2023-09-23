@@ -7,14 +7,26 @@
  */
 void print_sum_of_multiples(void)
 {
-int sum = 0, num = 1;
+	int sum = 0, num = 1;
 
-while (num < 1024)
-{
-	if (num % 3 == 0 || num % 5 == 0)
+	while (num < 1024)
 	{
-		sum += num;
+		if (num % 3 == 0 || num % 5 == 0)
+		{
+			sum += num;
+		}
+		num++;
 	}
+	printf("%d\n", sum);
 }
-printf("%d\n", sum);
+
+/**
+ * main - main entry
+ *
+ * Return: always 0 for success
+*/
+int main(void)
+{
+	print_sum_of_multiples();
+	return (0);
 }
