@@ -12,7 +12,7 @@
 void print_fibonacci(long int first, long int second, int count)
 {
 	printf("%lu", first);
-	if (count < 50)
+	if (count == 50)
 	{
 		printf("\n");
 		return;
@@ -30,6 +30,6 @@ void print_fibonacci(long int first, long int second, int count)
 */
 int main(void)
 {
-	print_fibonacci(1, 2, 0);
+	print_fibonacci(1, 2, 1);
 	return (0);
 }
