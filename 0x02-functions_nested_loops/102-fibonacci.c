@@ -31,4 +31,5 @@ void print_fibonacci(long int first, long int second, int count)
 int main(void)
 {
 	print_fibonacci(1, 2, 0);
+	return (0);
 }
