@@ -14,7 +14,7 @@ int pop_listint(listint_t **head)
 	listint_t *first_node;
 	int n;
 
-	if (!*head)
+	if (!head)
 		return (0);
 
 	first_node = *head;
