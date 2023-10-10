@@ -33,4 +33,5 @@ long int sumOfEvenFibonacci(long int first, long int second)
 int main(void)
 {
 	printf("%lu\n", sumOfEvenFibonacci(1, 2));
+	return (0);
 }
