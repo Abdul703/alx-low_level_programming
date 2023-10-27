@@ -10,19 +10,13 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int bits = 0;
-	unsigned long int num = n;
-	int bit;
+	unsigned int bit, total_bits = 0;
 
 	/* check if index out of range */
-	while (n > 1)
-	{
-		bits++;
-		n = n >> 1;
-	}
-	if (index > bits)
+	total_bits = sizeof(unsigned long int) * 8;
+	if (index >= total_bits)
 		return (-1);
 
-	bit = (num >> index) & 1 ? 1 : 0;
+	bit = (n >> index) & 1;
 	return (bit);
 }

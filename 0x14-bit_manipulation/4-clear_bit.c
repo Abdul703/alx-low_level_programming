@@ -10,17 +10,12 @@
 */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int bits;
 	unsigned long int mask;
-	unsigned long int num = *n;
+	unsigned int total_bits = 0;
 
 	/* check if index out of range */
-	while (num > 1)
-	{
-		bits++;
-		num = num >> 1;
-	}
-	if (index > bits)
+	total_bits = sizeof(unsigned long int) * 8;
+	if (index >= total_bits)
 		return (-1);
 
 	mask = ~(1 << index);
