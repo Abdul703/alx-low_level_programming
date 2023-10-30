@@ -12,22 +12,23 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	FILE *file;
+	ssize_t bytesRead;
 	char *buffer = malloc(letters + 1);
-	FILE *file = fopen(filename, "r");
-	ssize_t bytesRead = fread(buffer, 1, letters, file);
 
 	if (buffer == NULL)
 	{
-		fclose(file);
 		return (0);
 	}
 
+	file = fopen(filename, "r");
 	if (file == NULL)
 	{
 		free(buffer);
 		return (0);
 	}
 
+	bytesRead = fread(buffer, 1, letters, file);
 	if (bytesRead == -1)
 	{
 		free(buffer);
