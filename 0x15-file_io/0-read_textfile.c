@@ -36,6 +36,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
+	if (bytesRead == 0 && ferror(file))
+	{
+		free(buffer);
+		fclose(file);
+		return (0);
+	}
+
 	buffer[bytesRead] = '\0';
 	fprintf(stderr, "%s", buffer);
 
