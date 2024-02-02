@@ -1,23 +1,33 @@
 #include "main.h"
 
 /**
- * string_toupper - convert string to uppercase
+ * cap_string - capitalizes all words of a string.
  *
- * @str: string to convert
+ * @str: string to capitalize
  *
  * Return: pointer to the string
-*/
-char *cap_string(char *)
+ */
+char *cap_string(char *str)
 {
-	char *temp = str;
+	char *deli = " \n\t.,;?{}\"()!";
+	int i, j;
 
-    while (*temp != '\0')
-    {
-        if (*temp >= 'a' && *temp <= 'z')
-        {
-            *temp -= 32;
-        }
-        temp++;
-    }
-    return (str);
+	/* capitalize the 1st letter */
+	if (str[0] >= 'a' && str[0] <= 'z')
+	{
+		*str -= 32;
+	}
+
+	/* loop through the delimeter and capitalize the next letter*/
+	for (i = 1; str[i] != '\0'; i++)
+	{
+		for (j = 0; deli[j] != '\0'; j++)
+		{
+			if (str[i - 1] == deli[j] && (str[i] >= 'a' && str[i] <= 'z'))
+			{
+				*(str + i) -= 32;
+			}
+		}
+	}
+	return (str);
 }
