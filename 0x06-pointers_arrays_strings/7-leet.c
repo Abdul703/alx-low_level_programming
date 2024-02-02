@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string.
+ * leet - encode leat letters on a string.
  *
- * @str: string to capitalize
+ * @str: string to encode
  *
- * Return: pointer to the string
+ * Return: pointer to the result string
  */
 char *leet(char *str)
 {
@@ -14,7 +14,6 @@ char *leet(char *str)
 	char *leatValue = "43071";
 	int i, j;
 
-	/* l*/
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; leatLower[j] != '\0'; j++)
